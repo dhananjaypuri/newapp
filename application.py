@@ -1,6 +1,8 @@
-from flask import Flask, app , render_template
+from flask import Flask, render_template
 
 application = Flask(__name__);
+
+application.secret_key = "secretkey";
 
 @application.route('/', methods=['GET', 'POST'])
 def home():
